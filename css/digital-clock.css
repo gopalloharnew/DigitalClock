@@ -19,7 +19,7 @@ body{
 }
 
 .digital-clock{
-    background-color: hsl(210, 20%, 20%);
+    background-color: hsl(210, 20%, 15%);
     border-radius: 0.1em;
     font-size: 12vmin;
     line-height: 1.5em;
@@ -27,48 +27,27 @@ body{
     animation: text-color 60s ease infinite alternate;
     font-weight: 300;
     position: relative;
-    cursor: pointer;
     transition: transform 100ms ease-in-out;
-}
-
-.digital-clock:hover{
-    transform: translateY(-1vmin);
-}
-
-.digital-clock::after{
-    content: "";
-    width: 2em;
-    height: 1vmin;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    background-color: hsl(210, 20%, 20%);
 }
 
 @keyframes text-color {
     0%{
-        --color: hsl(0, 100%, 80%);
-        color: var(--color);
+        color: hsl(0, 100%, 80%);
     }
 
     25%{
-        --color: hsl(90, 100%, 80%);
-        color: var(--color);
+        color: hsl(90, 100%, 80%);
     }
 
     50%{
-        --color: hsl(180, 100%, 80%);
-        color: var(--color);
+        color: hsl(180, 100%, 80%);
     }
 
     75%{
-        --color: hsl(270, 100%, 80%);
-        color: var(--color);
+        color: hsl(270, 100%, 80%);
     }
 
     100%{
-        --color: hsl(360, 100%, 80%);
-        color: var(--color);
+        color: hsl(360, 100%, 80%);
     }
 }
