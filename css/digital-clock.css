@@ -24,22 +24,26 @@ body{
     font-size: 12vmin;
     line-height: 1.5em;
     padding: 0em 0.25em;
-    box-shadow: 0px 0px 0px 1vmin hsl(210, 20%, 20%, 0.25);
     animation: text-color 60s ease infinite alternate;
     font-weight: 300;
     position: relative;
+    cursor: pointer;
+    transition: transform 100ms ease-in-out;
 }
+
+.digital-clock:hover{
+    transform: translateY(-1vmin);
+}
+
 .digital-clock::after{
     content: "";
     width: 2em;
     height: 1vmin;
-    background-color: red;
     position: absolute;
     top: 100%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 0%);
     background-color: hsl(210, 20%, 20%);
-    box-shadow: 0px 0px 0px 1vmin hsl(210, 10%, 10%);
 }
 
 @keyframes text-color {
@@ -47,18 +51,22 @@ body{
         --color: hsl(0, 100%, 80%);
         color: var(--color);
     }
+
     25%{
         --color: hsl(90, 100%, 80%);
         color: var(--color);
     }
+
     50%{
         --color: hsl(180, 100%, 80%);
         color: var(--color);
     }
+
     75%{
         --color: hsl(270, 100%, 80%);
         color: var(--color);
     }
+
     100%{
         --color: hsl(360, 100%, 80%);
         color: var(--color);
